@@ -1,33 +1,39 @@
 body {
     background-color: #050505;
     color: #ffffff;
-    font-family: 'Helvetica Neue', Arial, sans-serif;
+    font-family: 'Segoe UI', Arial, sans-serif;
     margin: 0;
+    line-height: 1.6;
 }
 
-.navbar {
-    display: flex;
-    justify-content: space-between;
-    padding: 30px 10%;
-    align-items: center;
-}
-
-.brand { font-size: 1.5rem; font-weight: 800; letter-spacing: -1px; }
+nav { padding: 30px 10%; display: flex; align-items: center; }
+.brand { font-size: 1.5rem; font-weight: 800; }
 .brand span { color: #00ff88; }
 
-.navbar nav a { color: #888; text-decoration: none; margin-left: 30px; transition: 0.3s; }
-.navbar nav a:hover { color: #fff; }
+.hero { text-align: center; padding: 60px 20px; }
+.hero h1 { font-size: 2.5rem; margin-bottom: 10px; }
 
-.hero-section { text-align: center; padding: 100px 20px; }
-.hero-section h1 { font-size: 5rem; margin: 0; }
-.hero-section p { color: #666; font-size: 1.2rem; max-width: 600px; margin: 20px auto; }
+.app-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; padding: 20px 10%; }
 
-.main-cta {
-    background: #fff; color: #000; display: inline-block; padding: 15px 40px;
-    border-radius: 50px; font-weight: bold; cursor: pointer; margin-top: 20px;
+.app-card { 
+    background: #161616; padding: 30px; border-radius: 20px; 
+    border: 1px solid #333; transition: 0.3s; text-align: center;
+}
+.app-card:hover { border-color: #00ff88; transform: translateY(-10px); }
+
+.app-screenshot {
+    width: 100%;
+    max-width: 250px;
+    margin: 15px auto;
+    display: block;
+    border-radius: 10px;
+    border: 2px solid #333;
 }
 
-.grid-section { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; padding: 0 10%; margin-top: 50px; }
-.box { border: 1px solid #222; padding: 40px; border-radius: 20px; transition: 0.4s; }
-.box:hover { border-color: #fff; transform: translateY(-10px); }
-.highlight { border-color: #00ff88; }
+.tech-stack { margin: 15px 0; font-size: 0.85rem; color: #888; }
+
+.download-btn { 
+    display: inline-block; padding: 10px 20px; background: #00ff88; 
+    color: black; text-decoration: none; border-radius: 5px; font-weight: bold; 
+    margin-top: 10px;
+}
