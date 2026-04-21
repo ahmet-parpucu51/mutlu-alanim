@@ -1,39 +1,76 @@
+/* Arka planı düz siyahtan şık bir koyu griye çevirdik */
 body {
-    background-color: #050505;
-    color: #ffffff;
+    background: linear-gradient(135deg, #1a1a1a, #0d0d0d);
+    color: #e0e0e0;
     font-family: 'Segoe UI', Arial, sans-serif;
     margin: 0;
+    min-height: 100vh;
     line-height: 1.6;
 }
 
-nav { padding: 30px 10%; display: flex; align-items: center; }
-.brand { font-size: 1.5rem; font-weight: 800; }
+nav { padding: 40px 10%; display: flex; align-items: center; }
+.brand { font-size: 1.8rem; font-weight: 800; letter-spacing: -1px; }
 .brand span { color: #00ff88; }
 
-.hero { text-align: center; padding: 60px 20px; }
-.hero h1 { font-size: 2.5rem; margin-bottom: 10px; }
+.hero { text-align: center; padding: 40px 20px; }
+.hero h1 { font-size: 3rem; margin-bottom: 10px; color: #fff; }
+.hero p { color: #aaa; font-size: 1.2rem; }
 
-.app-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; padding: 20px 10%; }
-
-.app-card { 
-    background: #161616; padding: 30px; border-radius: 20px; 
-    border: 1px solid #333; transition: 0.3s; text-align: center;
+/* Grid yapısını daha dengeli hale getirdik */
+.app-grid { 
+    display: flex; 
+    flex-wrap: wrap; 
+    justify-content: center; 
+    gap: 40px; 
+    padding: 40px 10%; 
 }
-.app-card:hover { border-color: #00ff88; transform: translateY(-10px); }
+
+/* Kartları daha derinlikli yaptık */
+.app-card { 
+    background: rgba(255, 255, 255, 0.03); 
+    padding: 30px; 
+    border-radius: 25px; 
+    border: 1px solid rgba(255, 255, 255, 0.1); 
+    width: 320px;
+    text-align: center;
+    backdrop-filter: blur(10px); /* Modern bulanıklık efekti */
+    transition: 0.4s;
+}
+
+.app-card:hover { 
+    border-color: #00ff88; 
+    transform: translateY(-15px); 
+    background: rgba(255, 255, 255, 0.06);
+}
 
 .app-screenshot {
     width: 100%;
-    max-width: 250px;
-    margin: 15px auto;
+    max-width: 220px;
+    margin: 20px auto;
     display: block;
-    border-radius: 10px;
-    border: 2px solid #333;
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.5);
 }
 
-.tech-stack { margin: 15px 0; font-size: 0.85rem; color: #888; }
+.tech-stack { 
+    margin: 20px 0; 
+    font-size: 0.85rem; 
+    color: #00ff88; 
+    background: rgba(0, 255, 136, 0.1);
+    padding: 8px;
+    border-radius: 5px;
+}
 
 .download-btn { 
-    display: inline-block; padding: 10px 20px; background: #00ff88; 
-    color: black; text-decoration: none; border-radius: 5px; font-weight: bold; 
-    margin-top: 10px;
+    display: inline-block; 
+    padding: 12px 25px; 
+    background: #00ff88; 
+    color: #000; 
+    text-decoration: none; 
+    border-radius: 30px; /* Yuvarlak butonlar daha şık durur */
+    font-weight: bold; 
+    margin-top: 15px;
+    transition: 0.3s;
 }
+
+.download-btn:hover { background: #fff; transform: scale(1.05); }
