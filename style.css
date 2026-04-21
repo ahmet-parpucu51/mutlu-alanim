@@ -1,47 +1,33 @@
 body {
-    background-color: #0d1117; /* GitHub karanlık modu rengi */
-    color: #c9d1d9;
-    font-family: 'Courier New', Courier, monospace;
+    background-color: #050505;
+    color: #ffffff;
+    font-family: 'Helvetica Neue', Arial, sans-serif;
     margin: 0;
-    overflow-x: hidden;
 }
 
-.ticker-wrap {
-    background: #161b22;
-    padding: 10px 0;
-    border-bottom: 1px solid #30363d;
-}
-
-.ticker {
+.navbar {
     display: flex;
-    white-space: nowrap;
-    animation: marquee 20s linear infinite;
+    justify-content: space-between;
+    padding: 30px 10%;
+    align-items: center;
 }
 
-@keyframes marquee {
-    0% { transform: translateX(100%); }
-    100% { transform: translateX(-100%); }
+.brand { font-size: 1.5rem; font-weight: 800; letter-spacing: -1px; }
+.brand span { color: #00ff88; }
+
+.navbar nav a { color: #888; text-decoration: none; margin-left: 30px; transition: 0.3s; }
+.navbar nav a:hover { color: #fff; }
+
+.hero-section { text-align: center; padding: 100px 20px; }
+.hero-section h1 { font-size: 5rem; margin: 0; }
+.hero-section p { color: #666; font-size: 1.2rem; max-width: 600px; margin: 20px auto; }
+
+.main-cta {
+    background: #fff; color: #000; display: inline-block; padding: 15px 40px;
+    border-radius: 50px; font-weight: bold; cursor: pointer; margin-top: 20px;
 }
 
-.ticker-item { margin: 0 20px; color: #58a6ff; }
-
-.main-container { padding: 40px; max-width: 900px; margin: auto; }
-
-h1 { color: #58a6ff; letter-spacing: 2px; }
-
-.blink { animation: blinker 1s linear infinite; color: #238636; }
-@keyframes blinker { 50% { opacity: 0; } }
-
-.glass-card {
-    background: #161b22;
-    border: 1px solid #30363d;
-    padding: 20px;
-    border-radius: 10px;
-    margin-bottom: 20px;
-    transition: 0.3s;
-}
-
-.glass-card:hover { border-color: #58a6ff; transform: translateY(-5px); }
-
-.progress-bar { background: #30363d; border-radius: 5px; height: 10px; margin-top: 10px; }
-.progress { background: #238636; height: 100%; border-radius: 5px; }
+.grid-section { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; padding: 0 10%; margin-top: 50px; }
+.box { border: 1px solid #222; padding: 40px; border-radius: 20px; transition: 0.4s; }
+.box:hover { border-color: #fff; transform: translateY(-10px); }
+.highlight { border-color: #00ff88; }
